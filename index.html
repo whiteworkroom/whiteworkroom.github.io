@@ -1,28 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>White Workroom || Caleb White Online Portfolio</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
-	<meta name="copyright" content="(c) 2008 Caleb White - WhiteWorkroom">
-	<meta name="MSSmartTagsPreventParson" content="true">
-	<meta name="description" content="Online portfolio of Caleb White, photography and Web Design | Charleston | South Carolina | United States |">
-	<meta name="keywords" content="caleb, kaleb, c@leb, calieb, kalieb, white, wite, wit, whitey, portfolio, workroom, workrooms, whiteworkrooms, photography, fotographie, fotografía, photographer, deviantart, web, website, pagina, página, sitio web, webdesign, designer, webdesigner, affordable, asequible, professional, profesional, illustration, illustrator, ilustrador, photoshop, xhtml, css, resonabile, prices, barato, cheap, 简单, simple, sencillo, precios, 价格, useful, charleston, summerville, charlestón, 查尔斯顿, charles town, south carolina, carolina del sur, aiken, 艾肯, sc, united states, usa, north america, college of charleston">
-	<meta name="Author" content="Caleb White - WhiteWorkroom">
+---
+Author: Caleb White
+Title: Home
+----
 
-	<script src="splashscreen.js"></script>
+<div class="posts">
+	{% for post in paginator.posts %}
+	<div class="post">
+		<h1 class="post-title">
+			<a href="{{ post.url }}">
+				{{ post.title }}
+			</a>
+		</h1>
 
-	<link href="splashscreen.css" rel="stylesheet">
-</head>
-<body>
-<div id="splashscreen">
-	<h2>Welcome!</h2>
-	<p>Take a look at my new website.</p>
-	<img src="http://i.telegraph.co.uk/multimedia/archive/02182/kitten_2182000b.jpg" />
+		<span class="post-date">{{ post.date | date_to_string }}</span>
 
-	<a href="main.html" class="enter_link">Enter on the website</a>
-</div>
-</body>
-</html>
+		{{ post.content }}
+	</div>
+		{% endfor %}
+</div> 
+
+<div class="pagination">
+	{% if paginator.next_page %}
+		<a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+	{% else %}
+		<span class="pagination-item older">Older</span>
+	{% endif %}
+	{% if paginator.previous_page %}
+		{% if paginator.page == 2 %}
+			<a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a> 
+		{% else %}
+			<a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+		{% endif %}
+	{% else %}
+		<span class="pagination-item newer">Newer</span>
+	{% endif %}
+</div> 
+
