@@ -24,7 +24,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	font-family: "Helvetica Neue", Helvetica Neue, sans-serif;
+    font-size: 16px;
+    background-color: dimgrey; 
+    color: #4A4A4A;
+    padding: 3px;
 }
 ol, ul {
 	list-style: none;
@@ -48,6 +52,22 @@ body{
 	font-family: 'Lato',"Open Sans", Arial;
 	transition: ease-in-out all 300ms;
 }
+
+h1 {
+    font-family: Futura, serif;
+    border-bottom: 3px solid #52EDC7;
+    color: #FF2D55;
+    font-size: 30px;
+}
+
+#main {
+    padding: 5px;
+    padding-left:  15px;
+    padding-right: 15px;
+    background-color: #F7F7F7;
+    border-radius: 0 0 5px 5px;
+}
+
 .soon {
     position:absolute;
     width: 600px;
@@ -63,13 +83,13 @@ body{
 }
 .soon h1 {
 	text-align: center;
-	color: #fff;
+	color: #F7F7F7;
 	font-size: 3em;
 	font-family: 'Lato';
 	font-weight: 400;
 }
 .soon p{
-	color: #fff;
+	color: #F7F7F7;
 	font-family: 'Lato';
 	font-weight: 300;
 	text-align: center;
@@ -86,7 +106,7 @@ input{
 }
 .soon form input[type="email"]{
 	height: 2.5em;
-	color: #34495e;
+	color: #5856D6;
 	border-radius: 3px;
 	border: none;
 	padding: 0 .5em;
@@ -100,10 +120,10 @@ input{
 }
 .soon form input[type="submit"]{
 	height: 2.6em;
-	color: #fff;
+	color: #F7F7F7;
 	background-color: transparent;
 	border-radius: 3px;
-	border: 2px solid #fff;
+	border: 2px solid #F7F7F7;
 	padding: 0 1.5em;
 	padding-bottom: 0.1em;
 	font-family: 'Lato';
@@ -111,8 +131,8 @@ input{
 	font-size: .8em;
 }
 .soon form input[type="submit"]:hover{
-	background-color:#fff;
-	background: rgba(255, 255, 255, 0.3);
+	background-color:#F7F7F7;
+	background: rgba(247, 247, 247, 1);
 }
 
 .count {
@@ -129,5 +149,5 @@ input{
     position: absolute;
     right: 1%;
     top: 60%;
-    color: #ffffff;
+    color: #F7F7F7;
 }
