@@ -1,3 +1,6 @@
+document.getElementById("foot01").innerHTML =
+"<p>&copy;  " + new Date().getFullYear() + " SnapMu. All rights reserved.</p>";
+
 (function() {
         var target_date = new Date("July 30, 2016").getTime();
          
