@@ -10,7 +10,7 @@ title: White Workroom || Caleb White Online Portfolio
 email: calebwh96@me.com
 description: > # this means to ignore newlines until "baseurl:"
   Online portfolio of Caleb White, photography and Web Design | Charleston | South Carolina | United States |
-baseurl: "/_site/whiteworkroom.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://whiteworkroom.com" # the base hostname & protocol for your site
 twitter_username: calebwh96
 github_username:  whiteworkroom
